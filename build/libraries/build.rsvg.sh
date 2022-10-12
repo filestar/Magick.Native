@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+#set -e
 
 cd rsvg
 
@@ -11,6 +11,9 @@ rm gdk-pixbuf/config.h
 autoreconf -fiv
 chmod +x ./configure
 $CONFIGURE $CONFIGURE_OPTIONS --disable-shared --with-included-loaders=yes --enable-modules=no --prefix=/usr/local CFLAGS="$FLAGS"
+cat config.log
+
+exit 1
 $MAKE install
 
 cd ../librsvg

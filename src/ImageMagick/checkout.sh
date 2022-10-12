@@ -140,44 +140,14 @@ declare -r commitDate=`git log -1 --format=%ci`
 echo "Set latest commit date as $commitDate"
 cd ..
 
-clone_date 'aom' "$commitDate"
-clone_date 'de265' "$commitDate"
-clone_date 'exr' "$commitDate"
-clone_date 'freetype' "$commitDate"
-clone_date 'ffi' "$commitDate"
 clone_commit 'glib' "ba4e7f20ddff76693095fab606ad58c739aca7ac"
-clone_date 'heif' "$commitDate"
 clone_date 'jpeg-turbo' "$commitDate"
-clone_date 'lcms' "$commitDate"
-clone_date 'lqr' "$commitDate"
 clone_date 'openjpeg' "$commitDate"
 clone_date 'png' "$commitDate"
-clone_date 'raw' "$commitDate"
 clone_date 'tiff' "$commitDate"
-clone_date 'VisualMagick' "$commitDate"
-clone_date 'webp' "$commitDate"
-clone_date 'xml' "$commitDate"
 clone_date 'zlib' "$commitDate"
 
-if [ "$1" != "macos" ]; then
-    clone_date 'brotli' "$commitDate"
-    clone_date 'highway' "$commitDate"
-    clone_date 'jpeg-xl' "$commitDate"
-fi
-
-if [ "$1" == "wasm" ]; then
-    create_notice "$commitDate" $2
-    exit
-fi
-
 clone_date 'cairo' "$commitDate"
-clone_date 'croco' "$commitDate"
-clone_date 'ffi' "$commitDate"
-clone_date 'fribidi' "$commitDate"
-clone_date 'harfbuzz' "$commitDate"
-clone_date 'pango' "$commitDate"
-clone_date 'raqm' "$commitDate"
-clone_date 'pixman' "$commitDate"
 clone_date 'rsvg' "$commitDate"
 
 if [ "$1" == "macos" ] || [ "$1" == "linux" ]; then
@@ -191,17 +161,6 @@ if [ "$1" == "macos" ]; then
     create_notice "$commitDate" $2
     exit
 fi
-
-clone_date 'bzlib' "$commitDate"
-clone_date 'lzma' "$commitDate"
-clone_date 'zip' "$commitDate"
-
-if [ "$1" == "linux" ]; then
-    create_notice "$commitDate" $2
-    exit
-fi
-
-clone_date 'jp2' "$commitDate"
 
 create_notice "$commitDate" $2
 
