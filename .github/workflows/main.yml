@@ -7,6 +7,11 @@ on:
     - main
 
 name: main
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
 jobs:
   linux:
     name: 'Linux (x64)'
@@ -91,7 +96,7 @@ jobs:
 
     - name: debug
       run: cat config.log
-      working-directory: Magick.Native/src/ImageMagick/libraries/rsvg/gdk-pixbu
+      working-directory: Magick.Native/src/ImageMagick/libraries/rsvg/gdk-pixbuf
 
 
   macos:
