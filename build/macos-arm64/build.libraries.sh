@@ -31,13 +31,13 @@ echo ******BUILD GLIB
 $1/build.glib.sh
 #$1/build.lqr.sh
 #$1/build.pixman.sh
-#echo ******BUILD CAIRO
+echo ******BUILD CAIRO
 #$1/build.cairo.sh
 #$1/build.fribidi.sh
 #$1/build.harfbuzz.sh
-#echo ******BUILD PANGO
+echo ******BUILD PANGO
 #$1/build.pango.sh
-#echo ******BUILD CROCO
+echo ******BUILD CROCO
 #$1/build.croco.sh
 echo ******BUILD RSVG
 $1/build.rsvg.sh
