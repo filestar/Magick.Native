@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+echo ######## ENV
+env
+
 cd glib
 
 rm gio/gioenumtypes.c

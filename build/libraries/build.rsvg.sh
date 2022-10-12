@@ -1,6 +1,9 @@
 #!/bin/bash
 #set -e
 
+echo ######## ENV
+env
+
 cd rsvg
 
 export GLIB_MKENUMS="/usr/local/bin/glib-mkenums"
